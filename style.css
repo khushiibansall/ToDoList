@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppis', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f01c82, #f1a7d3);
+    padding: 10px;
+    /* here */
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    border-bottom: 20px;
+}
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#f1a7d3;
+    border-radius: 20px ;
+    padding-left: 20px ;
+    margin-bottom:25px ;
+    margin-top: 5px; 
+    /* added */
+}
+input{
+    flex:1;
+    border: none;
+    outline: none ;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px; 
+    /* nothing happening */
+    color: #002765;
+    
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #f01c82;
+    color: #002765;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+ul li{
+    list-style: none ;
+    font-size: 17px ;
+    padding: 12px 8px 12px 50px ;
+    margin-bottom: 10px;
+    border-radius: 20px ;
+    user-select: none ;
+    /* ye kya hai */
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content:'' ;
+    position: absolute ;
+    height: 25px ;
+    width: 25px ;
+    border-radius: 50% ;
+    background-image: url(unchecked.png);
+    background-size: cover ;
+    background-position: center ;
+    top: 7px;
+    left: 10px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(star-rating.png);
+}
+.task-name{
+    margin-right: 400px;
+    
+}
+.edit-btn{
+    margin-left: 352px;
+    position: absolute;
+    top: 8px;
+    right: 40px;
+  
+} 
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 2px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555 ;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background: #edeef0;
+    
+}
+ul li button {
+        background: none;
+        border: 1px solid grey;
+        /* border: none; */
+        outline: none;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 5px;
+        margin-left: 10px;
+        color: #555;
+    }
+    
+ul li button:hover {
+        background: #edeef0;
+    }
